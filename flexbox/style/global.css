@@ -131,3 +131,15 @@ p {
 	padding: 20px 30px;
 	border-radius: 4px;
 }
+
+.resources-list {
+	list-style-type: disc;
+}
+
+.resources-list-item {
+	padding: 10px;
+}
+
+.resources-list-item a {
+	text-decoration: none;
+}
