@@ -1,0 +1,12 @@
+.nav-list::-webkit-scrollbar {
+	width: 5px;
+}
+
+.nav-list::-webkit-scrollbar-thumb {
+	background: #2E7375;
+	border: 1px solid #0A4163;
+}
+
+.nav-list::-webkit-scrollbar-track {
+	background: #0B476D;
+}

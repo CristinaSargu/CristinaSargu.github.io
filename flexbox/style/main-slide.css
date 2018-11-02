@@ -3,6 +3,8 @@
 	bottom: 0;
 	right: 0;
 	width: 80%;
+	display: flex;
+	justify-content: flex-end;
 	overflow: hidden;
 }
 
@@ -13,7 +15,9 @@
 
 .about-me {
 	display: flex;
+	justify-content: center;
 	padding-left: 80px;
+	position: relative;
 }
 
 .my-info {
