@@ -1,0 +1,70 @@
+.phone-number {
+  margin: 0;
+  color: #fff;
+}
+
+.menu {
+  transform: rotate(90deg);
+  cursor: pointer;
+  color: #fff;
+}
+
+.card {
+	max-width: 340px;
+}
+
+.title {
+	margin: 20px 0;
+}
+
+.dir-col-rev .description {
+  /*display: none;*/
+}
+
+.description {
+	margin: 0;
+}
+
+.item {
+  padding: 5px;
+}
+
+.a {
+  background-color: #8B00E3;
+  color: #fff;
+  font-size: 80px;
+  transform: rotate(4deg);
+}
+
+.b {
+  background-color: #0CF035;
+  color: #333;
+  font-size: 100px;
+  transform: rotate(-2deg);
+}
+
+.e {
+  background-color: #F0C243;
+  color: #333;
+  font-size: 60px;
+}
+
+.c {
+  background-color: #FA310C;
+  color: #333;
+  font-size: 75px;
+  transform: rotate(-3deg);
+}
+
+.d {
+  background-color: #0C98FA;
+  color: #fff;
+  font-size: 68px;
+  transform: rotate(-1deg);
+}
+
+.r {
+  background-color: #0CF035;
+  color: #333;
+  font-size: 75px;
+}

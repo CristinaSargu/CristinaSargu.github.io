@@ -1,0 +1,19 @@
+.dir-row-rev {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #398689;
+}
+
+.dir-col {
+	display: flex;
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+}
+
+.dir-col-rev {
+	display: flex;
+	flex-direction: column;
+	/*flex-direction: column-reverse;*/
+	/*flex-wrap: wrap;*/
+}

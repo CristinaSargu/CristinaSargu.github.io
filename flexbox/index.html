@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<title>Flex in depth</title>
+</head>
+<body>
+	<section role="main">
+		<div class="content">
+			<ul class="nav-list">
+				<li class="nav-list-item">
+					<a href="#me" class="nav-item-link">Me</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#responsive" class="nav-item-link">Responsive</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-container" class="nav-item-link">Flex container</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-row" class="nav-item-link">Row</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-row-reverse" class="nav-item-link">Row-reverse</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-row-reverse-ex" class="nav-item-link">Row-reverse Ex.</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-column" class="nav-item-link">Column</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-column-ex" class="nav-item-link">Column Ex.</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-column-reverse" class="nav-item-link">Column-reverse</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-direction-column-reverse-ex" class="nav-item-link">Column-r. Ex.</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#facebookEN" class="nav-item-link">Facebook LTR</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#facebookAR" class="nav-item-link">Facebook RTL</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#writing-mode" class="nav-item-link">Writing mode</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#wrapping" class="nav-item-link">Wrapping</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#wrapping-wrap" class="nav-item-link">Wrap</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#wrapping-wrap-reverse" class="nav-item-link">Wrap-reverse</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-flow" class="nav-item-link">Flex-flow</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#flex-flow-example" class="nav-item-link">Guess what?</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#justify-content-1" class="nav-item-link">Justify part 1</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#justify-content-2" class="nav-item-link">Justify part 2</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#align-items-1" class="nav-item-link">Align i part 1</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#align-items-2" class="nav-item-link">Align i part 2</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#baseline-ex" class="nav-item-link">Baseline Ex.</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#baseline" class="nav-item-link">Baseline</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#align-content1" class="nav-item-link">Align c part 1</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#align-content2" class="nav-item-link">Align c part 2</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#align-content3" class="nav-item-link">Align c part 3</a>
+				</li>
+				<li class="nav-list-item">
+					<a href="#thanks" class="nav-item-link">Thanks!</a>
+				</li>
+			</ul>
+			<ul class="result-list">
+				<li id="me" class="list-content-item">
+					<div class="bg-img-wrapper">
+						<img src="img/bg.png" alt="Background image" class="bg-img">
+					</div>
+					<div class="items-content">
+						<div class="about-me">
+							<div class="my-info">
+								<h1 class="fs-50 my-name">Cristina Șargu</h1>
+								<h3 class="vertical-text">Front-end developer</h3>
+								<img src="img/Cristina.jpg" alt="" class="image my-img">
+							</div>
+							<div class="logos">
+								<img src="img/att.svg" alt="Att logo" class="logo att">
+								<img src="img/ellation.png" alt="Ellation logo" class="logo ellation">
+								<img src="img/vrv.svg" alt="Vrv logo" class="logo vrv">
+								<img src="img/crunchyroll.svg" alt="crunchyroll logo" class="logo crunchyroll">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="responsive" class="list-content-item">
+					<div class="example-wrapper align-center align-c-end">
+						<img src="img/responsive.png" alt="Responsive image" class="phones">
+					</div>
+				</li>
+				<li id="flex-container" class="list-content-item">
+					<div class="items-content">
+						<div class="example-wrapper">
+							<h2>display: flex</h2>
+							<div class="flex-box">
+								<p class="flex-box-child">1</p>
+								<span class="flex-box-child">2</span>
+								<div class="flex-box-child">3</div>
+							</div>
+						</div>
+						<div class="example-wrapper">
+							<h2>display: inline-flex</h2>
+							<div class="flex-box inline">
+								<p class="flex-box-child">1</p>
+								<span class="flex-box-child">2</span>
+								<div class="flex-box-child">3</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-row" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: row</h2>
+						<div class="content-wrapper">
+							<img src="img/row.png" alt="" class="image">
+							<!-- <div class="flex-box">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+							</div> -->
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-row-reverse" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: row-reverse</h2>
+						<div class="content-wrapper">
+							<img src="img/row-reverse.png" alt="" class="image">
+							<!-- <div class="flex-box dir-row-rev">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+							</div> -->
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-row-reverse-ex" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: row-reverse</h2>
+						<div class="content-wrapper">
+							<div class="flex-box dir-row-rev limited-width">
+								<div class="menu fs-22">|||</div>
+								<p class="phone-number fs-22">+373 000 33 77</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-column" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: column</h2>
+						<div class="content-wrapper">
+							<img src="img/column.png" alt="" class="image">
+							<!-- <div class="flex-box dir-col">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+							</div> -->
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-column-ex" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: column</h2>
+						<div class="content-wrapper">
+							<div class="parent card dir-col">
+							  <img src="img/fox.jpg" alt="Image" class="image">
+							  <h2 class="title">Would you believe that?</h2>
+							  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum eaque illo vitae ex hic corporis ea quod autem libero similique dicta dolore vero facere, illum nesciunt natus, atque sint aliquam.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-column-reverse" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: column-reverse</h2>
+						<div class="content-wrapper">
+							<img src="img/col-reverse.png" alt="" class="image">
+							<!-- <div class="flex-box dir-col-rev">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+							</div> -->
+						</div>
+					</div>
+				</li>
+				<li id="flex-direction-column-reverse-ex" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-direction: column-reverse</h2>
+						<div class="content-wrapper">
+							<div class="parent card dir-col-rev">
+							  <img src="img/fox.jpg" alt="Image" class="image">
+							  <h2 class="title">Would you believe that?</h2>
+							  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum eaque illo vitae ex hic corporis ea quod autem libero similique dicta dolore vero facere, illum nesciunt natus, atque sint aliquam.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="facebookEN" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>Facebook LTR</h2>
+						<div class="content-wrapper">
+							<img src="img/facebookEN.png" alt="" class="image">
+						</div>
+					</div>
+				</li>
+				<li id="facebookAR" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>Facebook RTL</h2>
+						<div class="content-wrapper">
+							<img src="img/facebookAR.png" alt="" class="image">
+						</div>
+					</div>
+				</li>
+				<li id="writing-mode" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>Writing mode for Japanese</h2>
+						<div class="content-wrapper">
+							<div class="flex-box wm-vetical-rl">
+								<div class="flex-box-child">一</div>
+								<div class="flex-box-child">二</div>
+								<div class="flex-box-child">三</div>
+								<div class="flex-box-child">四</div>
+								<div class="flex-box-child">五</div>
+								<div class="flex-box-child">六</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="wrapping" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>Wrapping</h2>
+						<div class="content-wrapper">
+							<div class="flex-box wrapping">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="wrapping-wrap" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-wrap: wrap</h2>
+						<div class="content-wrapper">
+							<img src="img/wrap.png" alt="" class="image">
+						</div>
+					</div>
+				</li>
+				<li id="wrapping-wrap-reverse" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>flex-wrap: wrap-reverse</h2>
+						<div class="content-wrapper">
+							<img src="img/wrap-reverse.png" alt="" class="image">
+						</div>
+					</div>
+				</li>
+				<li id="flex-flow" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>Flex flow</h2>
+						<div class="content-wrapper">
+							<code class="code-block">flex-flow: row</code>
+							<code class="code-block">flex-flow: nowrap</code>
+							<code class="code-block">flex-flow: row nowrap</code>
+							<code class="code-block">flex-flow: nowrap row</code>
+						</div>
+					</div>
+				</li>
+				<li id="flex-flow-example" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>← Flex flow →</h2>
+						<div class="content-wrapper">
+							<div class="flex-box flex-flow limited-width">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="justify-content-1" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>justify-content: flex-start (default)</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+						<h2>justify-content: flex-end</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width justify-end">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+						<h2>justify-content: center</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width justify-center">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="justify-content-2" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>justify-content: space-between</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width justify-between">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+						<h2>justify-content: space-around</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width justify-around">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+						<h2>justify-content: space-evenly</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box limited-width justify-evenly">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child">2</div>
+								<div class="flex-box-child">3</div>
+								<div class="flex-box-child">4</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child">6</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child">8</div>
+								<div class="flex-box-child">9</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="align-items-1" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-items: flex-start</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper align-start">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<!-- <div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div> -->
+							</div>
+						</div>
+						<h2>align-items: flex-end</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper align-end">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<!-- <div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div> -->
+							</div>
+						</div>
+						<h2>align-items: center</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper align-center">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<!-- <div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div> -->
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="align-items-2" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-items: stretch (default)</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+						<h2>align-items: baseline</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper align-baseline">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="baseline-ex" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-items: baseline</h2>
+						<div class="content-wrapper mb-40">
+							<div class="parent align-baseline">
+							  <div class="a item">A</div>
+							  <div class="b item">B</div>
+							  <div class="e item">E</div>
+							  <div class="c item">C</div>
+							  <div class="e item">E</div>
+							  <div class="d item">D</div>
+							  <div class="a item">A</div>
+							  <div class="r item">R</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="baseline" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-items: baseline</h2>
+						<h2>flex-direction: column</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper align-baseline dir-col">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="align-content1" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-content: flex-start</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-start">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+						<h2>align-content: flex-end</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-end">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="align-content2" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-content: center</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-center">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+						<h2>align-content: space-between</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-between">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="align-content3" class="list-content-item">
+					<div class="example-wrapper">
+						<h2>align-content: space-around</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-around">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+						<h2>align-content: stretch (default)</h2>
+						<div class="content-wrapper mb-40">
+							<div class="flex-box align-wrapper limited-height align-c-stretch">
+								<div class="flex-box-child">1</div>
+								<div class="flex-box-child fs-22">22 22</div>
+								<div class="flex-box-child fs-18">3</div>
+								<div class="flex-box-child fs-20 mt-30">44 44</div>
+								<div class="flex-box-child">5</div>
+								<div class="flex-box-child fs-18">66 66 66</div>
+								<div class="flex-box-child">7</div>
+								<div class="flex-box-child fs-18">88 88 </div>
+								<div class="flex-box-child fs-20">99 99</div>
+								<div class="flex-box-child">10</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li id="thanks" class="list-content-item">
+					<div class="example-wrapper dir-col align-center">
+						<h3 class="fs-120">Thank you!</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+</html>

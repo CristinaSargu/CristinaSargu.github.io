@@ -1,0 +1,96 @@
+.bg-img-wrapper {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80%;
+	overflow: hidden;
+}
+
+.bg-img {
+	margin-bottom: -130px;
+	opacity: 0.7;
+}
+
+.about-me {
+	display: flex;
+	padding-left: 80px;
+}
+
+.my-info {
+	position: relative;
+	padding: 0 20px 0 90px;
+}
+
+.my-name {
+	margin: 0 0 20px -60px;
+}
+
+.logos {
+	padding: 0 70px;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.logo {
+	max-width: 400px;
+	flex: 0 0 100%;
+	margin-bottom: 40px;
+}
+
+.att {
+	max-width: 210px;
+}
+
+.vrv {
+	max-width: 160px;
+	flex: 0 0 50%;
+}
+
+.crunchyroll {
+	max-width: 160px;
+	flex: 0 0 50%;
+}
+
+.vertical-text {
+	font-size: 56px;
+	margin: 0;
+	color: #00b1ca;
+	position: absolute;
+	top: 310px;
+	left: -215px;
+	transform: rotate(-90deg);
+}
+
+.phones {
+	max-width: 100%;
+	max-height: 890px;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+	.about-me {
+		padding-left: 0;
+	}
+
+	.logos {
+		padding: 0;
+		max-width: 40%;
+	}
+
+	.ellation {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.att, .ellation {
+		display: none;
+	}
+
+	.vrv, .crunchyroll {
+		width: 160px;
+	}
+}
